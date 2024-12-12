@@ -1,0 +1,47 @@
+
+@import 'header';
+@import 'burger';
+@import 'slider';
+@import 'catalog';
+@import 'fashion';
+@import 'product';
+@import 'footer';
+
+:root {
+    --color-main: #B3B3B3;
+    --color-second: #777575;
+}
+* {
+    margin: 0;
+    border: 0;
+    font-size: 0.875rem;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    // transition: 0.7s ease;
+}
+
+
+.text_with_black_background {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main {
+    text-transform: uppercase;
+}
+
+
+
+a {
+    display: inline-block; 
+    transition: transform 0.7s ease;
+}
+
+a:hover {
+    transform: scale(1.1) translateY(-10%);
+}
+

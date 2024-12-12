@@ -1,0 +1,140 @@
+/* off-screen-menu */
+header {
+  .container {
+    .logo {
+      &__menu {
+        &__off {
+          background-color: white;
+          height: 100vh;
+          width: 100%;
+          max-width: 22.185rem;
+          position: fixed;
+          top: 0;
+          left: -50rem;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          transition: 0.3s ease;
+          padding: 5rem 4.8rem;
+          gap: 3.875rem;
+          z-index: 10;
+
+          @media (max-height: 55rem) {
+            padding: 3rem 2rem;
+            gap: 2rem;
+          }
+
+          &.active {
+            left: 0;
+          }
+
+          &__top {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            &__close {
+              img {
+                height: 1.7rem;
+              }
+            }
+
+            &__logo {
+              img {
+                height: 3.125rem;
+
+                @media (max-height: 55rem) {
+                  height: 2rem;
+                }
+              }
+            }
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+              margin-bottom: 1rem;
+              @media (max-height: 55rem) {
+                margin-bottom: 0.4rem;
+              }
+
+              a {
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
+
+          &__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            button {
+              padding: 1rem;
+              width: 100%;
+              text-transform: uppercase;
+              color: white;
+              transition: 0.7s ease;
+
+              @media (max-height: 55rem) {
+                padding: 0.7rem;
+              }
+
+              &:hover {
+                background-color: transparent;
+                border: 1px solid black;
+                color: black;
+            }
+            }
+
+            &-black {
+              background-color: black;
+
+            }
+
+            &-grey {
+              background-color: var(--color-main);
+            }
+          }
+
+          &__bottom {
+            margin-top: auto;
+            height: 9rem;
+
+            @media (max-height: 55rem) {
+              height: 6.5rem;
+            }
+
+            &-small {
+              font-size: 0.625rem;
+              color: var(--color-second);
+            }
+          }
+        }
+
+        &__hamburger {
+          svg {
+            width: 2rem;
+            color: white;
+
+            @media (max-width: 47rem) {
+              width: 1.3rem;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.logo__menu__off.active {
+  left: 0;
+}
+
+.menu-item-bold {
+  font-weight: bold;
+}

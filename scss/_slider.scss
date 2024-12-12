@@ -1,0 +1,120 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper_header 
+{
+  margin-top: -15px;
+    .swiper-wrapper {
+      @media (max-width: 47rem) {
+        margin-top: 5.5rem;
+    }
+    }
+    .swiper-button {
+      width: 90%;
+
+      @media (max-width: 47rem) {
+        margin-top: 5.5rem;
+    }
+    }
+}
+
+header .swiper-slide,
+fashion .swiper-slide {
+  height: 100vh;
+  margin: 0;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide1 {
+  background-image: url("../img/photo_intro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @media (max-width: 47rem) {
+    background-image: url("../img/photo_intro_phone.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+}
+
+.swiper-slide2 {
+  background-image: url("../img/photo_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 47rem) {
+    background-image: url("../img/photo_1_phone.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+}
+
+@media (max-width: 62rem) {
+  .swiper-slide1, .swiper-slide2 {
+  background-position: 25%;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: transparent;
+
+  height: auto;
+  width: auto;
+
+  &:after {
+    width: 0;
+  }
+
+  img {
+    @media (max-width: 87rem) {
+        height: 5rem;
+    }
+    @media (max-width: 47rem) {
+      height: 2rem;
+  }
+  }
+}
+
+.swiper-button {
+  position: absolute;
+  display: flex;
+  width: 97%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
